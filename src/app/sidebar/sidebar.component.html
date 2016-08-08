@@ -1,0 +1,35 @@
+ <div class="demo-avatar-dropdown">
+             <h6>Payment Processing</h6>
+            <span>Range</span>
+            <div class="mdl-layout-spacer"></div>
+
+</div>
+<nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
+
+<!--<hr>
+
+<label> <input type="checkbox" (change)="selectAll()"> All</label><br />
+
+<div *ngFor="#iobj of objectArray; #i = index">
+    <label> <input type="checkbox" id="id" [ngModel] ="allSelected"> {{item.label}}</label><br />
+    
+</div>-->
+<label> <input type="checkbox" (change)="selectAll()"> All</label><br />
+
+<li *ngFor="#obj of objectArray">
+   <div class="small" data-value="option1" tabIndex="-1">
+      <input type="checkbox" (change)="expression && expression[obj.name] = $event.target.checked ? true : undefined" 
+      [ngModel]="allSelected" > <label for="">{{obj}}</label>
+
+   </div>
+</li>
+<!--<div *ngFor="#item of hoursOftheDay; #i = index">
+    <label> <input type="checkbox" id="id" [ngModel] ="partialSelected"> {{item.label}}</label><br />
+    <thead> <label> <input type="checkbox" id="id" [ngModel] ="partialSelected"> {{item.label}}</label><br />
+    </thead>
+</div>-->
+
+
+</nav>
+
+
