@@ -1,0 +1,8 @@
+  
+<div (change)="selectedActionChange($event)">
+    <input type="checkbox" *ngFor="#opt of optionList"/> {{ opt }}
+     </div>
+
+        <div class="below">
+          <input type="checkbox" [ngModel]="checkboxValue" (ngModelChange)="checkboxChanged($event)" />
+ </div>

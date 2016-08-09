@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {SideBarService} from './sidebar.service';
-import { ChildComponent } from './child.component';
+import { ChildComponent } from './child.component'; 
 
 
 export interface MaterialComponentHandler {
@@ -28,7 +28,9 @@ export class SidebarComponent {
   partialSelected: boolean;
   myData: any;
   objectArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-  optionList: Array<string> = ["Add", "Replace", "Skip"];
+  optionList: Array<string> = ["Add", 
+                              "Replace", 
+                              "Skip"];
   masterCheckboxValue: boolean = true;
   masterSelectAction: string;
 
@@ -38,7 +40,7 @@ export class SidebarComponent {
 
   }
   
-  SelectPart(event){
+  selectPart(event){
     this.partialSelected = !this.partialSelected;
     alert(this.partialSelected);
   }
