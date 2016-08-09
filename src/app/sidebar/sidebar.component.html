@@ -24,7 +24,18 @@
    </div>
 
    <div>
-     
+     <select (change)="selectedActionChange($event)">
+				<input type="checkbox" *ngFor="#opt of optionList">{{ opt }}</input>
+				</select>
+              <div>
+                <label>Import Test</label>
+                <br />
+                <input type="checkbox" checked (change)="headerCheckboxChanged($event)"/>
+              </div>
+      
+          <child *ngFor="#test of testList" [test]="test" [checkboxValue]="masterCheckboxValue" [selectedAction]="masterSelectAction"
+          (action)="actionChange($event)" (checked)="checkedChanged($event)"></child>
+
    </div>
 </li>
 <!--<div *ngFor="#item of hoursOftheDay; #i = index">

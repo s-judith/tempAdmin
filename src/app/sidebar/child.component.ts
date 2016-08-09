@@ -1,19 +1,19 @@
-import {Component, EventEmitter, Output, Input} from 'angular/core'
+import {Component, EventEmitter, Output, Input} from '@angular/core';
 
 
 // Child Component
 @Component({
-    selector: 'tbody',
+    selector: 'child',
     template: `
-        <td>{{ test }}</td>
-        <td>
+    
+       <div>
           <select (change)="selectedActionChange($event)">
-            <option *ngFor="#opt of optionList">{{ opt }}</option>
+            <input type="checkbox" *ngFor="#opt of optionList">{{ opt }}</input>
           </select>
-        </td>
-        <td class="below">
+        </div>
+        <div class="below">
           <input type="checkbox" [ngModel]="checkboxValue" (ngModelChange)="checkboxChanged($event)" />
-        </td>
+        </div>
     `
 })
 export class ChildComponent {
