@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {TreeService} from './tree.service';
 import { TreeNodeComponent } from './tree-node';
 import {MaterialService} from '../../services';
+import {CheckChangedEvent} from './checked-changed.model'
 
 @Component({
   moduleId: module.id,
@@ -60,8 +61,8 @@ export class TreeComponent {
     console.log(event.value);
   }
 
-  checked(value) {
-    console.log(`checked called! ${value}`);
+  checked(event:CheckChangedEvent) {
+    console.log(`checked called! ${event.group} ${event.index} ${event.value}`);
   }
 }
 

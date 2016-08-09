@@ -1,4 +1,6 @@
 import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
+import {CheckChangedEvent} from '../'
+
 
 @Component({
   moduleId: module.id,
@@ -8,6 +10,8 @@ import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 })
 
 export class TreeNodeComponent implements OnInit {
+  @Input() group: number;
+  @Input() index: number;
   @Input() name: string;
   @Input() value: boolean;
   @Output() checked: EventEmitter<any> = new EventEmitter();
@@ -19,7 +23,9 @@ export class TreeNodeComponent implements OnInit {
   }
 
   checkChanged() {
-    this.checked.emit(this.value);
+    debugger;
+    var result = new CheckChangedEvent(this.group, this.index, this.value);
+    this.checked.emit(result);
   }
 
 }

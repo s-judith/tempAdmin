@@ -39,7 +39,7 @@ const barrels: string[] = [
   'app/dashboard',
   'app/search',
   'app/search/tree',
-  'app/search/tree/tree-node',
+  'app/search/tree/tree-node'
   /** @cli-barrel */
 ];
 
