@@ -6,9 +6,8 @@ import {MaterialService} from '../../services';
 @Component({
   moduleId: module.id,
   selector: 'tree',
-  host: { class: 'mdl-layout__drawer mdl-layout--fixed-drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50' },
-  templateUrl: 'sidebar.component.html',
-  styleUrls: ['sidebar.component.css'],
+  templateUrl: 'tree.component.html',
+  styleUrls: ['tree.component.css'],
   providers: [TreeService, MaterialService],
   directives: [TreeNodeComponent]
 })
