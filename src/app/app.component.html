@@ -1,10 +1,19 @@
-  <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header has-drawer is-upgraded" data-upgraded=",MaterialLayout">
-  <app-header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600 is-casting-shadow">
-    </app-header>
-    <app-sidebar>
-      </app-sidebar>
-       <app-main class="mdl-layout__content mdl-color--grey-100">
-       <app-dashboard></app-dashboard>
-      </app-main>
-     </div>
-` 
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button">
+        <i class="material-icons">menu</i>
+      </div>
+      <!-- Title -->
+      <span class="mdl-layout-title">Title</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+    </div>
+  </header>
+  <app-search></app-search>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+      <app-dashboard></app-dashboard>
+    </div>
+  </main>
+</div>

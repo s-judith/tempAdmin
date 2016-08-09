@@ -8,18 +8,30 @@
 
 
   <label> <input type="checkbox" (change)="selectAll()"> All</label><br />
-
-  <li *ngFor="#obj of objectArray">
-    <label for="">
+  
+  <!--<li *ngFor="#obj of objectArray">
+  </li>-->
+    
+    <!--<label for="">
       <input type="checkbox" (change)="expression && expression[obj.name] = $event.target.checked ? true : undefined" [ngModel]="allSelected"> 
         {{obj}}
-    </label>
+    </label>-->
     <!--<div>
       <div (change)="selectedActionChange($event)">
         <input type="checkbox" *ngFor="#opt of optionList" />{{ opt }}
       </div>
     </div>-->
-  </li>
+
+    <li *ngFor="let time of myData">
+        {{time.name}}
+        <ul>
+          <li *ngFor="let item of time.values" >
+            <tree-node [name]="item.name" [value]="true" (checked)="checked()"></tree-node>
+          </li>
+          <br />
+        </ul>
+    </li>
+    <br />
 
 
 </nav>

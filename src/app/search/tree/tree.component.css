@@ -1,3 +1,7 @@
 :host{
     background-color: red;
 }
+
+ul, li{
+    list-style: none;
+}

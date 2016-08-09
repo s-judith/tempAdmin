@@ -46,6 +46,9 @@ const barrels: string[] = [
   'app/dashboxlist',
   'app/datepicker',
   'app/table',
+  'app/sidebar/shared/tree-node',
+  'app/sidebar/tree-node',
+  'app/search',
   /** @cli-barrel */
 ];
 
